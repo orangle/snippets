@@ -68,6 +68,7 @@ docs/_build/
 
 # PyBuilder
 target/
+out/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -104,3 +105,8 @@ venv.bak/
 .mypy_cache/
 
 *.xlsx
+.idea/
+*.class
+*.iml
+*.ipr
+*.iws
