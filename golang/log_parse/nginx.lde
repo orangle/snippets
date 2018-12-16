@@ -1,0 +1,19 @@
+Nginx = 
+    IP(string) " "
+    ^"- - [" Time(string) ']'
+    ^" "Cost(uint32)" "
+    ^'"'Request(string)'"'
+    ^" "Status(int64)" "
+    ByteSend(int64)" "
+    BodyByteSend(int64)" "
+    ^'"'Referer(string)'"'
+    ^" "
+    ^'"'Cookie(string)'"'
+    ^' '
+    ^'"'UserAgent(string)'"'
+    ^' ' 
+    ^'"'Xfor(string)'"'
+    ^' 'ConnID(string)' '
+    ^'"'Hit(string)'"' 
+    ^" "
+    ServerIp(string);
