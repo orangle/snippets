@@ -14,3 +14,12 @@ def datetime_to_st(dt):
     return time.mktime(dt.timetuple())
 
 
+def ts_to_datestr(ts, fmt="%Y-%m-%d %H:%M"):
+    """可读性"""
+    return ts_to_datetime(ts).strftime(fmt)
+
+
+def timestr_to_ts(timestr):
+    """apid的输入参数格式"""
+    dt = datetime.strptime(timestr, "%Y-%m-%d:%H:%M")
+    return datetime_to_ts(dt)

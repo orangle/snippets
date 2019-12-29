@@ -12,6 +12,17 @@ python 2.7
 * list + set 的方式实现
 * zset的方式实现
 
+### 大key删除
+
+redis中一些大key的删除操作
+
+* hash 删除
+* list 删除
+* set 删除
+* sortset 删除 
+
+总的思路，有scan方法使用scan方法，没有的话就是部分删除，多次删除
+
 
 
 

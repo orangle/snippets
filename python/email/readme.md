@@ -5,5 +5,7 @@ Emails
 
 
 ```
-pip install emails
+pip3 install emails jinja2
 ```
+
+https://github.com/lavr/python-emails
