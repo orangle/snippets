@@ -4,14 +4,17 @@ import os
 import random 
 import time 
 
+
 async def makeitem(size: int = 5) -> str:
     return os.urandom(size).hex
+
 
 async def randsleep(caller=None):
     i = random.randint(0, 10)
     if caller:
         print(f"{caller} sleeping for {i} seconds.")
     await asyncio.sleep(0) #
+
 
 async def produce(name: int, q: asyncio.Queue) -> None:
     n = random.randint(0, 10)
@@ -22,6 +25,7 @@ async def produce(name: int, q: asyncio.Queue) -> None:
         await q.put((i, t))
         print(f"Producer {name} added <{i}> to queue.")
 
+
 async def consume(name: int, q: asyncio.Queue) -> None:
     while True:
         await randsleep(caller=f"Consumer {name}")
@@ -31,6 +35,7 @@ async def consume(name: int, q: asyncio.Queue) -> None:
               f" in {now-t:0.5f} seconds.")
         q.task_done()
 
+
 async def main(nprod: int, ncon: int):
     q = asyncio.Queue()
     producers = [asyncio.create_task(produce(n, q)) for n in range(nprod)]
@@ -39,6 +44,7 @@ async def main(nprod: int, ncon: int):
     await q.join()  # Implicitly awaits consumers, too
     for c in consumers:
         c.cancel()
+
 
 if __name__ == "__main__":
     import argparse
