@@ -61,3 +61,8 @@ for x in itertor:
 
 ### transport and protocol
 
+
+### ref
+
+- https://alexwlchan.net/2019/10/adventures-with-concurrent-futures/
+- https://rednafi.github.io/digressions/python/2020/04/21/python-concurrent-futures.html
