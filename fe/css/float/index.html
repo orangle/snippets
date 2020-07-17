@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float布局</title>
+</head>
+<style>
+    /* 浮动可以理解为让某个div元素脱离标准流，漂浮在标准流之上，和标准流不是一个层次。 */
+    div {
+        border: 1px solid red;
+    }
+    .leftContainer {
+        width: 4.4rem;
+        margin: var(--distance-md) var(--distance-exlg) var(--distance-md) 0;
+        float: left;
+    }
+    .box {        
+        background-color: #ccc;            
+        display: flex;            
+        display: -webkit-flex;            
+        justify-content: center;            
+        align-items: center; 
+        height: 600px; 
+    }
+    /* 设置居中 */
+</style>
+
+<body>
+    <div style="width: 200px; background-color: blue; height: 100;">
+        第一行
+    </div>
+    <div style="width: 300px; background-color: yellow; height: 40; float: left;">
+        第二行 总是占一行
+    </div>
+    <div style="width: 600px; background-color: green; height: 80; float: right;">
+        第3行 总是占一行
+    </div>
+    <div style="width: 200px; background-color: gray; height: 200; float: right;">
+        第4行 总是占一行
+    </div>
+
+    <hr style="clear: both;">
+    <div class="box">
+        <div style="width: 30%; height: 100%; left: 0; top:0; float: left;">
+            左边的list.
+        </div>
+        <div style="height: 100%; float: left; width: 40%">
+            右边的list
+        </div>
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>
